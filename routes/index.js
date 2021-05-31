@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const userCtrl = require('../controllers/users');
+const picksCtrl = require('../controllers/picks');
 
-router.get('/', userCtrl.index);
-router.post('/', userCtrl.create);
+router.get('/', picksCtrl.index);
+router.post('/', picksCtrl.create);
 
 
 module.exports = router;
