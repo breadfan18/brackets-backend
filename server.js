@@ -13,7 +13,7 @@ const app = express();
 require('./config/database');
 
 // create route variables
-const usersRouter = require('./routes/index');
+const picksRouter = require('./routes/index');
 
 // mount middlewares
 app.use(express.static('public'));
@@ -21,7 +21,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/users', usersRouter);
+app.use('/api/picks', picksRouter);
 
 app.listen(port, () => {
     console.log(`Express is listening on port:${port}`);
