@@ -1,4 +1,4 @@
-let User = require('../models/pick');
+let Pick = require('../models/pick');
 
 module.exports = {
     index,
@@ -6,13 +6,14 @@ module.exports = {
 }
 
 function index(req, res) {
-    User.find({}, function (err, users) {
-        res.status(200).json(users);
+    Pick.find({}, function (err, picks) {
+        res.status(200).json(picks);
     })
 }
 
 function create(req, res) {
-    User.create(req.body, function (err, user) {
-        res.status(201).json(user)
+    console.log(req.body);
+    Pick.create(req.body, function (err, picks) {
+        res.status(201).json(picks)
     })
 }
