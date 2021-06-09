@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const resultsCtrl = require('../controllers/results');
 
-router.post('/', resultsCtrl.create);
+router.get('/', resultsCtrl.create);
 
 module.exports = router;
