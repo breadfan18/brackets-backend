@@ -14,6 +14,7 @@ require('./config/database');
 
 // create route variables
 const picksRouter = require('./routes/index');
+const resultsRouter = require('./routes/results');
 
 // mount middlewares
 app.use(express.static('public'));
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/api/picks', picksRouter);
+app.use('/api/results', resultsRouter);
 
 app.listen(port, () => {
     console.log(`Express is listening on port:${port}`);
