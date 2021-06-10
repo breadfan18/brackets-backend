@@ -1,13 +1,20 @@
 let Pick = require('../models/pick');
 
 module.exports = {
-    index,
+    indexUser,
+    indexAll,
     create,
     update
 }
 
-function index(req, res) {
+function indexUser(req, res) {
     Pick.find({uid: req.query.uid}, function (err, picks) {
+        res.status(200).json(picks);
+    })
+}
+
+function indexAll(req, res) {
+    Pick.find({}, function (err, picks) {
         res.status(200).json(picks);
     })
 }
