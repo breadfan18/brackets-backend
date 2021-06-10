@@ -1,7 +1,13 @@
 let Result = require('../models/results');
 
 module.exports = {
+    index,
     create
+}
+
+function index(req, res){
+    Result.find({}, function (err, results) {
+        res.status(200).json(results)    })
 }
 
 function create(req, res) {
