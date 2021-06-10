@@ -5,9 +5,10 @@ module.exports = {
     create
 }
 
-function index(req, res){
+function index(req, res) {
     Result.find({}, function (err, results) {
-        res.status(200).json(results)    })
+        res.status(200).json(results)
+    })
 }
 
 function create(req, res) {
