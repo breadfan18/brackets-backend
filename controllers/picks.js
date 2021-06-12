@@ -4,7 +4,8 @@ module.exports = {
     indexUser,
     indexAll,
     create,
-    update
+    update, 
+    delete: deletePick
 }
 
 function indexUser(req, res) {
@@ -29,7 +30,12 @@ function create(req, res) {
 function update(req, res) {
     console.log(req.body)
     Pick.findByIdAndUpdate(req.params.id, req.body, function (err, pick) {
-       
         indexUser(req, res);
+    })
+}
+
+function deletePick(req, res){
+    Pick.findByIdAndDelete(req.params.id, function (err, pick) {
+        indexUser(req, res)
     })
 }
