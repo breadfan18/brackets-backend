@@ -27,8 +27,9 @@ function create(req, res) {
 }
 
 function update(req, res) {
+    console.log(req.body)
     Pick.findByIdAndUpdate(req.params.id, req.body, function (err, pick) {
-        // req.query.uid = pick.uid;
-        index(req, res);
+       
+        indexUser(req, res);
     })
 }
