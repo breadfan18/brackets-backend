@@ -14,7 +14,8 @@ const picksSchema = new mongoose.Schema({
     semisPicks: {},
     finalPick: String,
     totalPoints: Number,
-    uid: String
+    uid: String,
+    username: String
 },
     {
         timestamps: true
