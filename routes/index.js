@@ -7,5 +7,4 @@ router.post('/', picksCtrl.create);
 router.put('/:id', picksCtrl.update);
 router.delete('/:id', picksCtrl.delete);
 
-
 module.exports = router;
