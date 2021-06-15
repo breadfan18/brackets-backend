@@ -15,7 +15,8 @@ const picksSchema = new mongoose.Schema({
     finalPick: String,
     totalPoints: Number,
     uid: String,
-    username: String
+    username: String,
+    photo: String
 },
     {
         timestamps: true
